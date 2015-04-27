@@ -1,3 +1,19 @@
-name, date, description
+John Dobson 
+github.com/jdobson92
+Jacinda Ballantyne 
+github.com/jbtyne
 
-be sure to include complete details of how to interact with your game, the scoring system, and how to win
+4/27/15
+
+This game is meant to be a low key version of galaga. 4 rows of 4 targets (rectangles) are initialized
+ on the top half of the play field. The player (a triangle) is initialized in the lower leftmost corner
+ of the play field. The play field is set up as a sort of mini-canvas, with the player actually moving 
+ below the play field. A "bullet" is initialized at the top of the player triangle. When the space bar 
+ is hit, the bullet object would be flagged as "fired". For each render, the y position of the bullet 
+ would increase, until a collision with any of the active targets is detected. The targets were meant 
+ to be flagged as "hit", changed to match the background colour, and ignored in future collision detections.
+ By "deactivating" the targets instead of not rendering them after being hit, the number of vertices being
+ sent to the GPU would stay the same, and prevent the need for extra math. Each time a target would be 
+ deactivated, a score variable was meant to be incremented. This variable would be passed to the html file,
+ and displayed above the canvas. When the score would reach a max value (corresponding to all targets being hit),
+ the game would reset.
